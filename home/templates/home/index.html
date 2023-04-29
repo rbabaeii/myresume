@@ -176,22 +176,38 @@
         <div class="box">
           <img src="{% static 'home/img/namasha.jpg' %}" alt="" />
           <div class="content">
-            <h3>پروژه سایت فیلم و سریال که فیلم و سریال های روز دنیا میتواند در آن قرار بگیرد</h3>
+            <p style="font-size: 20px;">پروژه سایت فیلم و سریال که فیلم و سریال های روز دنیا میتواند در آن قرار بگیرد</p>
           </div>
         </div>
+
         <div class="box">
           <img src="{% static 'home/img/university.jpg' %}" alt="" />
           <div class="content">
-            <h3>یک پروژه دانشگاهی برای دانشجو عزیزمون که ذوق به نمایش گذاشتن نمراتش را داشت</h3>
+            <p style="font-size: 20px;">پروژه دانشگاهی برای به نمایش گذاشتن نمرات دروس </p>
+            <a href="#" class="btn" style=" font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
+
           </div>
         </div>
         <div class="box">
           <img src="{% static 'home/img/todoapp.jpg' %}" alt="" />
           <div class="content">
-            <h3>پروژه  todoapp برای زمانبندی کارها</h3>
+            <p style="font-size: 20px;">پروژه TodoApp برای زمانبندی کارها </p>
+            <a href="#" class="btn" style=" font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
+            <a href="{% url 'todo:todo-list' %}" class="btn" style=" font-size: 15px;" >دیدن نسخه آنلاین و دموی سایت  </a>
+
           </div>
       </div>
+      <div class="box">
+        <img src="{% static 'home/img/oonlineshop.png' %}" alt="" />
+        <div class="content">
+          <p style="font-size: 20px;">پروژه TodoApp برای زمانبندی کارها </p>
+          <a href="#" class="btn" style="  font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
+          <a href="{% url 'onlineshop:home-page' %}" class="btn" style=" font-size: 15px;" >دیدن نسخه آنلاین و دموی سایت  </a>
+
+        </div>
+    </div>
     </section>
+    
     <!-- portfolio section ends -->
     <!-- contact section start -->
     <div class="contact" id="contact">

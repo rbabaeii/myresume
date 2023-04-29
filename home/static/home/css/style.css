@@ -391,7 +391,7 @@ section {
   -moz-border-radius: 5rem;
   -ms-border-radius: 5rem;
   -o-border-radius: 5rem;
-}
+}f
 .about .row .progress .bar-1-1 {
   width: 70%;
 }
@@ -484,7 +484,7 @@ section {
 .portfolio .box-container .box {
   height: 25rem;
   border-radius: 0.5rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: var(--box-shadow);
   position: relative;
   border: 1rem solid transparent;
@@ -498,7 +498,22 @@ section {
   height: 100%;
   object-fit: cover;
 }
-.portfolio .box-container .box .content {
+
+@media screen and (max-width:500px) {
+  .box{
+   width: 100%; 
+   margin-bottom: 200px;
+  }
+  
+}
+@media screen and (min-width:500px) {
+  .box{
+   width: 100%; 
+   margin-bottom: 250px;
+  }
+  
+}
+/* .portfolio .box-container .box .content {
   position: absolute;
   top: 0;
   right: 0;
@@ -512,16 +527,16 @@ section {
   -moz-transform: scale(0);
   -ms-transform: scale(0);
   -o-transform: scale(0);
-}
-.portfolio .box-container .box:hover .content {
+} */
+/* .portfolio .box-container .box:hover .content {
   cursor: pointer;
   transform: scale(1);
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
-}
-.portfolio .box-container .box .content h3 {
+} */
+/* .portfolio .box-container .box .content h3 {
   font-size: 2.5rem;
   color: var(--black);
   transform: translateY(-8rem);
@@ -535,15 +550,15 @@ section {
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
-}
-.portfolio .box-container .box:hover .content h3 {
+} */
+/* .portfolio .box-container .box:hover .content h3 {
   transform: translateY(0rem);
   -webkit-transform: translateY(0rem);
   -moz-transform: translateY(0rem);
   -ms-transform: translateY(0rem);
   -o-transform: translateY(0rem);
   opacity: 1;
-}
+} */
 .contact form {
   margin: 1rem auto;
   max-width: 70rem;
@@ -635,4 +650,28 @@ section {
     width: 100%;
     border-left: 0;
   }
+}
+
+
+a.cart-btn {
+  font-family: 'Poppins', sans-serif;
+
+  display: block;
+  z-index: 0;
+  background-color: #085729;
+  color: #fff;
+  padding: 10px 20px;
+  margin: auto;
+  border-radius: 10%;
+}
+
+a.cart-btnn {
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  z-index: 0;
+  background-color: #a2f704;
+  color: black;
+  padding: 10px 20px ;
+  margin: auto;
+  border-radius: 10%;
 }

@@ -1,5 +1,6 @@
-from django.shortcuts import render , redirect
+from django.shortcuts import render , redirect, resolve_url
 from django.views import View
+from onlineshop.models import ContactUs
 from .models import Comments
 # home page view
 
@@ -12,6 +13,8 @@ class Home_page(View):
         name =  request.POST['name']
         email = request.POST['email']
         message = request.POST['message']
-        data = Comments(title = title ,name =  name , email = email  , text = message)
+        data = ContactUs(name = name , email = email , subject = title ,  message = message)
         data.save()
-        return redirect('/')
+        
+        url = resolve_url('account:message')
+        return redirect(f"{url}?m=پیام شما با موفقیت ارسال شد پس از ۵ ثانیه به صفحه اول منتقل میشوید")

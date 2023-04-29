@@ -1,0 +1,57 @@
+{% extends 'onlineshop/base.html' %}
+{% load static %}
+{% block content %}
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>See more Details</p>
+						<h1>Single Product</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- single product -->
+	<div class="single-product mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="single-product-img">
+						{% if  object.img %}
+						<img src="{{ object.img.url }}" alt="">
+						{% else %}
+						<img src="{% static 'onlineshop/img/avaters/avatar1.png' %}" alt="">
+						{% endif %}
+					</div>
+				</div>
+				<div class="col-md-7">
+					<div class="single-product-content">
+						<h3> {{ object.name }}</h3>
+						<p class="single-product-pricing"><span>Per Kg</span> {{ object.finally_price }}</p>
+						<p>{{ object.description }}</p>
+						<div class="single-product-form">
+
+							
+							<form action="{% url 'onlineshop:product-add' object.id %}" method="post">
+								{% csrf_token %}
+								<input type="number" min="1"  value="1" name="quantity">
+								<!-- <button  class="cart-btn" type="submit">click</button> -->
+								<!-- <input type="submit" > -->
+							
+							<input type="submit" style="font-size: 10px;" value="Add To Cart">
+						</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end single product -->
+
+{% endblock content %}

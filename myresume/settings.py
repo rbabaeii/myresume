@@ -37,9 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # home app
+    #  apps
     'home',
+    'onlineshop',
+    'todolist',
+    'account' ,
+    # install apps
+    'ckeditor',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -118,12 +124,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-
+MEDIA_URL = 'media/'
 STATIC_ROOT = '/home/elovupoa/public_html/static'
-MEDIA_ROOT = '/home/elovupoa/public_html/media'
+MEDIA_ROOT = 'media/'
 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# User customize
+AUTH_USER_MODEL = 'account.User'

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Redirecting in 5 seconds...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'account/message.css' %}">
+</head>
+<body>
+  <div class="container">
+    <p>{{ Message }}</p>
+  </div>
+  <script src="{% static 'account/message.js' %}"></script>
+</body>
+</html>
