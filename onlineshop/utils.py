@@ -77,7 +77,7 @@ def get_payment_gateway(amount, description, user_phone):
 
 def verify_payment(authority, amount):
     ZP_API_VERIFY = f"https://sandbox.zarinpal.com/pg/rest/WebGate/PaymentVerification.json"
-    merchant_id = '1344b5d4-0048-11e8-94db-005056a205be'
+    merchant_id = '----'
     data = {
         'MerchantID': merchant_id,
         'Authority': authority,
