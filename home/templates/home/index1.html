@@ -1,12 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="fa" dir="rtl">
-  {% load static %}
+  
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reza babaei</title>
-
     <!-- font awesome cdn link  -->
     <link
       rel="stylesheet"
@@ -15,9 +15,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <link
+      rel="stylesheet"
+      href="style1.css"
+    />
+    <script src="app
+    "></script>
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/style1.css' %}" />
   </head>
   <!-- custom js file link  -->
   <body>
@@ -184,7 +189,7 @@
           <img src="{% static 'home/img/university.jpg' %}" alt="" />
           <div class="content">
             <p style="font-size: 20px;">پروژه دانشگاهی برای به نمایش گذاشتن نمرات دروس </p>
-            <a href="#" class="btn" style=" font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
+            <!-- <a href="#" class="cart-btn" style=" font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a> -->
 
           </div>
         </div>
@@ -192,7 +197,7 @@
           <img src="{% static 'home/img/todoapp.jpg' %}" alt="" />
           <div class="content">
             <p style="font-size: 20px;">پروژه TodoApp برای زمانبندی کارها </p>
-            <a href="https://github.com/rbabaeii/myresume/tree/master/todolist" class="btn" style=" font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
+            <a href="#" class="btn" style=" font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
             <a href="{% url 'todo:todo-list' %}" class="btn" style=" font-size: 15px;" >دیدن نسخه آنلاین و دموی سایت  </a>
 
           </div>
@@ -200,26 +205,36 @@
       <div class="box">
         <img src="{% static 'home/img/oonlineshop.png' %}" alt="" />
         <div class="content">
-          <p style="font-size: 20px;">پروژه فروشگاه آنلاین سبزی و میوه جات</p>
-          <a href="https://github.com/rbabaeii/myresume/tree/master/onlineshop" class="btn" style="  font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
+          <p style="font-size: 20px;">پروژه TodoApp برای زمانبندی کارها </p>
+          <a href="#" class="btn" style="  font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
           <a href="{% url 'onlineshop:home-page' %}" class="btn" style=" font-size: 15px;" >دیدن نسخه آنلاین و دموی سایت  </a>
-
         </div>
+        
+    </div>
+    
+    <div class="box">
+      <img src="{% static 'home/img/oonlineshop.png' %}" alt="" />
+      <div class="content">
+        <p style="font-size: 20px;">پروژه فروشگاه آنلاین سبزی و میوه جات</p>
+        <a href="https://github.com/rbabaeii/myresume/tree/master/onlineshop" class="btn" style="  font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
+        <a href="{% url 'onlineshop:home-page' %}" class="btn" style=" font-size: 15px;" >دیدن نسخه آنلاین و دموی سایت  </a>
+
       </div>
-        <div class="box">
-          <img src="{% static 'home/img/panjere.png' %}" alt="" />
+    </div>
+      <div class="box">
+        <img src="{% static 'home/img/panjere.png' %}" alt="" />
+        <div class="content">
+          <p style="font-size: 10px;">پنجره بک اند سایت یا برنامه ای مثل دیوار و شیپور میباشد که با API توسط فریمورک جنگو رست فریمورک پیاده سازی شده</p>
+          <a href="https://github.com/rbabaeii/Panjere" class="btn" style="  font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
+        </div>
+    </div>
+          <div class="box">
+          <img src="{% static 'home/img/rbfood.png' %}" alt="" />
           <div class="content">
-            <p style="font-size: 20px;">پنجره بک اند سایت یا برنامه ای مثل دیوار و شیپور میباشد که با API توسط فریمورک جنگو رست فریمورک پیاده سازی شده</p>
-            <a href="https://github.com/rbabaeii/Panjere" class="btn" style="  font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
+            <p style="font-size: 10px;">Rb-food بک اند سایت یا برنامه ای مثل اسنپ فود با امکانات مشابه میباشد که با API توسط فریمورک جنگو رست فریمورک پیاده سازی شده سیستم احراز هویت پروژه با jwt پیاده سازی شده</p>
+            <a href="https://github.com/rbabaeii/Rb-food" class="btn" style="  font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
           </div>
       </div>
-            <div class="box">
-            <img src="{% static 'home/img/rbfood.png' %}" alt="" />
-            <div class="content">
-              <p style="font-size: 20px;">Rb-food بک اند سایت یا برنامه ای مثل اسنپ فود با امکانات مشابه میباشد که با API توسط فریمورک جنگو رست فریمورک پیاده سازی شده سیستم احراز هویت پروژه با jwt پیاده سازی شده</p>
-              <a href="https://github.com/rbabaeii/Rb-food" class="btn" style="  font-size: 15px;" > دیدن و دسترسی به کدهای این نمونه کار  </a>
-            </div>
-        </div>
     </section>
     
     <!-- portfolio section ends -->

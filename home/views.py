@@ -6,7 +6,7 @@ from .models import Comments
 
 class Home_page(View):
     def get(self ,request):
-        return render(request , "home/index.html")
+        return render(request , "home/index1.html")
 
     def post(self , request):
         title = request.POST['title']
