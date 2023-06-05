@@ -24,7 +24,7 @@ class Account(View):
         if request.user.is_authenticated == True:
             messagee = resolve_url('account:message')
 
-            return redirect(f"{messagee}?m=شما در حال حاضر لاگین هستید \n پس از ۵ ثانیه به صفحه اول منتقل میشوید")
+            return redirect(f"{messagee}?m=شما درحال حاضر لاگین میباشید لطفا به صفحه اول بازگردید")
         else:
             return render(request ,'account/index.html')
     def post(self , request):
