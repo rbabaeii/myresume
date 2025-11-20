@@ -8,6 +8,7 @@ class Home_page(View):
     def get(self ,request):
         return render(request , "home/index.html")
 
+
     def post(self , request):
         title = request.POST['title']
         name =  request.POST['name']
