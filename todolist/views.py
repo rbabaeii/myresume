@@ -24,13 +24,14 @@ class landing_page(View):
                 category = request.POST['category_select']
                 data = Data(description = description ,dueDate = dueDate , category = Categories.objects.get(name = category) , user = request.user)
                 data.save()
-                return redirect('todo-list')
+                return redirect('todo:todo-list')
             elif "taskDelete" in request.POST:
                 for k in request.POST:
                     try:
+                        print("AA")
                         data = Data.objects.get(id = k , user = request.user)
                         data.delete()
-                        return redirect("todo-list")
+                        return redirect("todo:todo-list")
                     except:
                         continue
         else:
@@ -59,7 +60,7 @@ class Update(View):
             todo.description = title
             todo.category = Categories.objects.get(name = categories)
             todo.save()
-            return redirect("todo-list")
+            return redirect("todo:todo-list")
         else:
             
              return redirect('account:account')
